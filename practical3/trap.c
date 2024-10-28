@@ -1,33 +1,32 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
-    // Define variables
-    double a = 0.0;
-    double b = M_PI / 3.0;  // Upper limit is pi/3
-    int N = 12;  // Number of intervals
-    double h = (b - a) / N;  // Width of each interval
+int main(void) 
+{
+    int N = 12;
+    float a = 0;
+    float b = 60;  
 
-    // Initialize sum with the end points
-    double sum = tan(a) + tan(b);
-
-    // Loop through interior points and add 2*tan(x_i) to the sum
-    for (int i = 1; i < N; i++) {
-        double x_i = a + i * h;
-        sum += 2 * tan(x_i);
+    float b_rad;
+    b_rad = (M_PI * b) / 180;
+    
+    float sum = tan(a) + tan(b_rad);
+    printf("The value of sum before the loop is: %f\n", sum);
+    int i;
+    for (i = 5; i < 60; i = i + 5)
+    {
+        sum += 2 * tan(i * M_PI / 180);
     }
 
-    // Final calculation of the area under the curve
-    double area = (h / 2) * sum;
+    printf("The value of sum after the loop is: %f\n", sum);
+    sum = ((b_rad - a)/(2 * N)) * sum;
+    printf("The final value of sum is: %f\n", sum);
+    printf("The actual value is %f\n", logf(2));
 
-    // Calculate the exact result and the error
-    double exact_result = log(2);
-    double error = fabs(area - exact_result);
+    float abs_diff = fabs(sum-logf(2));
+    float rel_diff = fabs(1-(sum/logf(2)));
 
-    // Print the results
-    printf("Approximate area under curve using trapezoidal rule: %.6f\n", area);
-    printf("Exact area (log(2)): %.6f\n", exact_result);
-    printf("Error: %.6f\n", error);
+    printf("abs_diff = %f\nrel_diff = %f\n", abs_diff, rel_diff);
 
     return 0;
 }
