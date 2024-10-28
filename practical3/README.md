@@ -8,6 +8,9 @@ This folder contains practical 3 codes.
 ## Execute:
 * ./trapC
 
- Approximate area under curve using trapezoidal rule: 0.695045
- Exact area (log(2)): 0.693147
- Error: 0.001898
+ The value of sum before the loop is: 1.732051
+ The value of sum after the loop is: 15.929254
+ The final value of sum is: 0.695045
+ The actual value is 0.693147
+ abs_diff = 0.001898
+ rel_diff = 0.002738
