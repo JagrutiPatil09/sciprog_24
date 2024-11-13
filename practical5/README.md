@@ -22,3 +22,32 @@ This folder contains practical 5 codes.
  -285007387 -945834654 -1230842041 2118290601 887448560 -1289228135 -401779575 -1691007710 -2092787285 511172301 
  -1581614984 -1070442683 1642909629 572466946 -2079590721 -1507123775 708252800 -798870975 -90618175 -889489150 
  -980107325
+
+## Compile:
+* gcc arctan.c arctanC -lm
+
+## Execute:
+* ./arctanC
+
+ Please enter a positive real number delta:
+ 0.001
+ The difference at x = -0.90 is 0.0031391438
+ The difference at x = -0.80 is 0.0010705906
+ The difference at x = -0.70 is 0.0005616904
+ The difference at x = -0.60 is 0.0001465353
+ The difference at x = -0.50 is 0.0000563923
+ The difference at x = -0.40 is 0.0000335397
+ The difference at x = -0.30 is 0.0000336042
+ The difference at x = -0.20 is 0.0000018874
+ The difference at x = -0.10 is 0.0000020144
+ The difference at x = 0.00 is 0.0000000000
+ The difference at x = 0.10 is 0.0000020144
+ The difference at x = 0.20 is 0.0000018874
+ The difference at x = 0.30 is 0.0000336042
+ The difference at x = 0.40 is 0.0000335397
+ The difference at x = 0.50 is 0.0000563923
+ The difference at x = 0.60 is 0.0001465353
+ The difference at x = 0.70 is 0.0005616904
+ The difference at x = 0.80 is 0.0010705906
+ The difference at x = 0.90 is 0.0031391438
+
